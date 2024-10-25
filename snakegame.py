@@ -129,32 +129,32 @@ class snake(object):
                 c.draw(surface)
 
 
-class Rock:
-    def __init__ (self, pos,speed=1,color=(139,69,19)):
-        self.pos = pos # the position of the rock
-        self.speed = speed # the speed of the rock drop
-        self.color = color # color of the rock
-    def drop(self):
-        self.pos = (self.pos[0], self.pos[1] +self.speed )
+# class Rock:
+#     def __init__ (self, pos,speed=1,color=(139,69,19)):
+#         self.pos = pos # the position of the rock
+#         self.speed = speed # the speed of the rock drop
+#         self.color = color # color of the rock
+#     def drop(self):
+#         self.pos = (self.pos[0], self.pos[1] +self.speed )
 
-    def draw (self,surface):
-        dis = cube.w // cube. rows
-        i = self.pos[0]
-        j = self.pos[1]
+#     def draw (self,surface):
+#         dis = cube.w // cube. rows
+#         i = self.pos[0]
+#         j = self.pos[1]
 
-        # Calculate the vertices of the triangle
-        vertex1 = (i * dis + dis // 2, j * dis)  # Top vertex
-        vertex2 = (i * dis + dis, j * dis + dis)  # Bottom right vertex
-        vertex3 = (i * dis, j * dis + dis)  # Bottom left vertex
+#         # Calculate the vertices of the triangle
+#         vertex1 = (i * dis + dis // 2, j * dis)  # Top vertex
+#         vertex2 = (i * dis + dis, j * dis + dis)  # Bottom right vertex
+#         vertex3 = (i * dis, j * dis + dis)  # Bottom left vertex
 
-        # Draw the rock as a triangle
-        pygame.draw.polygon(surface, self.color, [vertex1, vertex2, vertex3])
+#         # Draw the rock as a triangle
+#         pygame.draw.polygon(surface, self.color, [vertex1, vertex2, vertex3])
     
-    def off_screen(self):
-        # Check if the rock is off the screen (bottom of the grid)
-        if self.pos[1] >= cube.rows:
-            return True
-        return False
+#     def off_screen(self):
+#         # Check if the rock is off the screen (bottom of the grid)
+#         if self.pos[1] >= cube.rows:
+#             return True
+#         return False
 
 
 
@@ -164,7 +164,8 @@ def redrawWindow(surface):
         surface.fill((255,255,255))
         score_text = font.render(f"Score:{score}", True, (0,0,0))  # score print out on the screen
         light_timer_text=font.render(f"Timer:{light_timer}", True, (0,0,0)) # count down when the game is on light mode
-        surface.blit(light_timer_text,(80,10)) # Position the timer counts down at the top left corner
+        #surface.blit(light_timer_text,(80,10)) # Position the timer counts down at the top left corner
+        surface.blit(light_timer_text,(10,30))
     elif light_map == "off":
         surface.fill ((0,0,0))
         score_text = font.render(f"Score: {score}", True, (255,255,255))  # Black text color
@@ -225,7 +226,7 @@ def main():
     speedSnack, doubleSnack,lightSnack,goldSnack1, goldSnack2  = None, None, None, None, None
     rock=None
     light_map = "off"
-    speeding_timer = 50 # 
+    speeding_timer = 80 # 
     light_timer=50
     # rock_count_down=200
     gold = 0
@@ -235,25 +236,13 @@ def main():
     while True:
         pygame.time.delay(50)
         s.move()
-        # rock_count_down-=1
-
-        # if rock_count_down == 0:
-        #     rock_cols = random.randrange(width)
-        #     rock=Rock(rock_cols,0)
-        #     rock.drop()
-        #     rock_count_down=200
-        
-        # if s.body[0].pos == rock.pos:
-        #     s.addCube()
-        #     rock.remove(rock)
-
 
         if s.speed_boost: # If boost is active, increase speed for a limited time
             clock.tick(15)  # Boosted speed
             speeding_timer -= 1
-            if speeding_timer <= 50:  # Reset boost after a certain time
+            if speeding_timer <= 0:  # Reset boost after a certain time
                 s.speed_boost = False
-                speeding_timer = 0
+                speeding_timer = 80
                 for i in s.body:
                     if i.color != (204, 204, 0):
                         i.color=(255, 0, 0)
@@ -288,11 +277,11 @@ def main():
             normalSnack = cube(randomSnack(rows, s), color=(0, 255, 0))
 
             # Randomly spawn the special snack
-            if random.randint(0, 4) == 3: # speed snack
+            if random.randint(0, 4) == 0: # speed snack
                 speedSnack = cube(randomSnack(rows, s), color=(0, 128,255))
-            if random.randint(0, 4) == 3: # double snack
+            if random.randint(0, 4) == 0: # double snack
                 doubleSnack = cube(randomSnack(rows, s), color=(255,51,51))
-            if random.randint(0, 1) == 1: # travel snack
+            if random.randint(0, 10) == 0: # light snack
                 if light_map == "off":
                     lightSnack =cube(randomSnack(rows, s), color=(255,255,255))
             print("Score:",score)
