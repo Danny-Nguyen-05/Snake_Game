@@ -199,11 +199,9 @@ def main():
     s = snake((255, 0, 0), (10, 10))
     normalSnack = cube(randomSnack(rows, s), color=(0, 255, 0))
     speedSnack, doubleSnack,lightSnack,goldSnack1, goldSnack2  = None, None, None, None, None
-    rock=None
     light_map = "off"
     speeding_timer = 80 # 
     light_timer=50
-    # rock_count_down=200
     gold = 0
     printMess=True
     print("Score:",score)
