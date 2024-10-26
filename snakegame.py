@@ -129,32 +129,7 @@ class snake(object):
                 c.draw(surface)
 
 
-# class Rock:
-#     def __init__ (self, pos,speed=1,color=(139,69,19)):
-#         self.pos = pos # the position of the rock
-#         self.speed = speed # the speed of the rock drop
-#         self.color = color # color of the rock
-#     def drop(self):
-#         self.pos = (self.pos[0], self.pos[1] +self.speed )
 
-#     def draw (self,surface):
-#         dis = cube.w // cube. rows
-#         i = self.pos[0]
-#         j = self.pos[1]
-
-#         # Calculate the vertices of the triangle
-#         vertex1 = (i * dis + dis // 2, j * dis)  # Top vertex
-#         vertex2 = (i * dis + dis, j * dis + dis)  # Bottom right vertex
-#         vertex3 = (i * dis, j * dis + dis)  # Bottom left vertex
-
-#         # Draw the rock as a triangle
-#         pygame.draw.polygon(surface, self.color, [vertex1, vertex2, vertex3])
-    
-#     def off_screen(self):
-#         # Check if the rock is off the screen (bottom of the grid)
-#         if self.pos[1] >= cube.rows:
-#             return True
-#         return False
 
 
 
