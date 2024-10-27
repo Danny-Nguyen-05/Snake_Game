@@ -217,7 +217,7 @@ def main():
     s = snake((255, 0, 0), (10, 10))
     normalSnack = cube(randomSnack(rows, s), color=(0, 255, 0))
     speedSnack, doubleSnack,lightSnack,goldSnack1, goldSnack2  = None, None, None, None, None
-    light_map, light_timer, gold, printMess = "off", 50, 0, True
+    speeding_timer, light_map, light_timer, gold, printMess = 80,"off", 50, 0, True
 
     clock = pygame.time.Clock()
 
