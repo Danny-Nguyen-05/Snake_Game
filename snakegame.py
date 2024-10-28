@@ -1,4 +1,4 @@
-import math
+#import math
 import random
 import pygame
 import tkinter as tk
@@ -267,7 +267,7 @@ def main():
             normalSnack = cube(randomSnack(rows, s), color=(0, 255, 0))
 
             # Randomly spawn the special snack
-            if random.randint(0, 4) == 0: # speed snack
+            if random.randint(0, 0) == 0: # speed snack
                 speedSnack = cube(randomSnack(rows, s), color=(0, 128,255))
             if random.randint(0, 4) == 0: # double snack
                 doubleSnack = cube(randomSnack(rows, s), color=(255,51,51))
@@ -277,6 +277,7 @@ def main():
             print("Score:",score)
 
         if speedSnack and s.body[0].pos == speedSnack.pos:
+            speeding_timer = 80
             timer_special_snack=-1
             score +=5
             s.addCube()
