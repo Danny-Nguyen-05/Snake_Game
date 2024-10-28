@@ -1,6 +1,6 @@
 # Author: Nguyen, Cuong Phuc
 # Project's name: Snake Game with Enhanced Gameplay Edition 
-# Date: 09/02/2024 - Present
+# Date: 09/07/2024 - Present
 # Environment: Visual Studio Code
 
 import random
