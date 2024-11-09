@@ -271,7 +271,7 @@ def main():
             normalSnack = cube(randomSnack(rows, s), color=(0, 255, 0))
 
             # Randomly spawn the special snack
-            if random.randint(0, 0) == 0: # speed snack
+            if random.randint(0, 4) == 0: # speed snack
                 speedSnack = cube(randomSnack(rows, s), color=(0, 128,255))
             if random.randint(0, 4) == 0: # double snack
                 doubleSnack = cube(randomSnack(rows, s), color=(255,51,51))
