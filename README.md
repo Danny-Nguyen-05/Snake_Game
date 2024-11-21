@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/bf49f004-1790-47df-9ff4-f5fe80eb7bf1" alt="WELCOME" width="400" height="300" >
+  <img src="https://github.com/user-attachments/assets/e1f0ea05-76c9-48a0-b0d6-e347d76e044e" alt="WELCOME" width="400" height="300" >
+</div>
 <h1 align="left">
   Enhanced Snake Game with Power-ups and Special Modes
 </h1> <br/>
