@@ -23,7 +23,7 @@ pip install pygame
 Obtain the source code from the repository and execute the file like any other Python script (.py): </br>
 
 ``` python
-python Snake_Game-main\main.py
+python Snake_Game-main/main.py
 ```
 
 
