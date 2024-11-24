@@ -6,8 +6,30 @@
   Enhanced Snake Game with Power-ups and Special Modes
 </h1> <br/>
 
-### **Overview:** <br/>
-* Developed a customized version of the classic Snake game using Python and Pygame. Implemented various gameplay features to increase complexity, improve user engagement, and provide multiple scoring strategies through specialized snack types. <br/>
+<h2 align="left">
+  Overview
+</h2> 
+Developed a customized version of the classic Snake game using Python and Pygame. Implemented various gameplay features to increase complexity, improve user engagement, and provide multiple scoring strategies through specialized snack types. <br/>
+<h2 align="left">
+  Installing
+</h2>
+If Python is not already installed, download the installer package from the official website (https://www.python.org/downloads/) and complete the installation. </br>
+Use the following command in the terminal to install the Pygame library </br>
+
+``` python
+pip install pygame
+```
+<h2 align="left">
+  Running the application
+</h2>
+Obtain the source code from the repository and execute the file like any other Python script (.py).. </br>
+
+``` python
+python 
+```
+
+
+
 
 ### **Key Features:** <br/>
 * **Power-ups and Speed Boosts**: Introduced multiple power-ups including speed-boosting snacks, double-points snacks, and time-limited lighting mode to enhance player experience. <br/>
