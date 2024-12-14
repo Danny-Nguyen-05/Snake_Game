@@ -6,16 +6,37 @@
   Enhanced Snake Game with Power-ups and Special Modes
 </h1> <br/>
 
-### **Overview:** <br/>
-* Developed a customized version of the classic Snake game using Python and Pygame. Implemented various gameplay features to increase complexity, improve user engagement, and provide multiple scoring strategies through specialized snack types. <br/>
+<h2 align="left">
+  Overview
+</h2> 
+Developed a customized version of the classic Snake game using Python and Pygame. Implemented various gameplay features to increase complexity, improve user engagement, and provide multiple scoring strategies through specialized snack types. <br/>
 
-### **Key Features:** <br/>
+## **Installing** <br/>
+* If Python is not already installed, download the installer package from the official website (https://www.python.org/downloads/) and complete the installation. </br>
+* Use the following command in the terminal to install the Pygame library: </br>
+
+``` python
+pip install pygame
+```
+
+## **Running the application** <br/>
+Obtain the source code from the repository and execute the file like any other Python script (.py): </br>
+
+``` python
+python Snake_Game-main/main.py
+```
+
+
+
+
+## **Key Features:** <br/>
 * **Power-ups and Speed Boosts**: Introduced multiple power-ups including speed-boosting snacks, double-points snacks, and time-limited lighting mode to enhance player experience. <br/>
 * **Light Mode and Gold Snacks**: Created a unique light mode, where players must activate and navigate within a time limit to collect rare "gold" snacks for bonus points. <br/>
 * **Score Tracking and Display**: Incorporated a scoring system with various snack types yielding different points and real-time display updates for an engaging user interface. <br/>
 * **Adaptive Snake Growth and Movemen**t: Enhanced snake movement with boundary wrapping and turn-tracking, enabling smooth transitions as the snake grows. <br/>
 
-### **Technologies Used**: Python, Pygame, Tkinter for UI and message boxes.
+### **Technologies Used**:
+* Python, Pygame, Tkinter for UI and message boxes.
 
 ### **Challenges Addressed:** <br/>
 * Managed complex game mechanics such as timed snack expiration, conditional speed boost durations, and boundary wrapping for continuous gameplay.
